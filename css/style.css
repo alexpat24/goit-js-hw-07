@@ -1,8 +1,8 @@
 /* task-03 */
 #gallery {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 li {
