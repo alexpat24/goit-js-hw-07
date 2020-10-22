@@ -18,14 +18,19 @@ const images = [
 
 const galleryRef = document.querySelector("#gallery");
 
-images.map((el) => {
-  galleryRef.insertAdjacentHTML(
-    "beforeEnd",
-    `<li><img src="${el.url}" alt="${el.alt}"></li>`
-  );
-});
+// images.map((el) => {
+//   galleryRef.insertAdjacentHTML(
+//     "beforeEnd",
+//     `<li><img src="${el.url}" alt="${el.alt}"></li>`
+//   );
+// });
 
 // const galleryRef = document.querySelector("#gallery");
 // images.map((el) => {
 //   galleryRef.insertAdjacentHTML("beforeEnd", `<li><img src="${el.url}" alt="${el.alt}"></li>`
 //   ));
+
+let markup = images.map((el) => {
+  return `<li><img src="${el.url}" alt="${el.alt}"></li>`;
+});
+galleryRef.insertAdjacentHTML("beforeEnd", markup.join(" "));
